@@ -11,15 +11,27 @@ import InvoiceRegistry from './pages/invoice_registry';
 function App() {
   return (
     <Router>
-      <Header />
-      <Routes>
-        <Route path="/" element={<Main />} />
-        <Route path="/finanzas" element={<FinanceOverview />} />
-        <Route path="/analisis-rendimiento" element={<PerformanceAnalysis />} />
-        <Route path="/registro-facturas" element={<InvoiceRegistry />} />
-      </Routes>
-      <Footer />
-      <FloatingWhatsAppButton />
+      <div style={{ 
+        display: 'flex', 
+        flexDirection: 'column', 
+        minHeight: '100vh' 
+      }}>
+        <Header />
+        <div style={{ 
+          marginTop: '80px', 
+          marginBottom: '60px',
+          flex: 1
+        }}>
+          <Routes>
+            <Route path="/" element={<Main />} />
+            <Route path="/finanzas" element={<FinanceOverview />} />
+            <Route path="/analisis-rendimiento" element={<PerformanceAnalysis />} />
+            <Route path="/registro-facturas" element={<InvoiceRegistry />} />
+          </Routes>
+        </div>
+        <Footer />
+        <FloatingWhatsAppButton />
+      </div>
     </Router>
   );
 }

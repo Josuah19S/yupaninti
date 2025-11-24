@@ -19,6 +19,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-y: scroll;
 }
 
 code {
@@ -68,4 +69,54 @@ code {
   background-color: var(--primary-color);
   color: white !important;
   border-radius: 4px;
+}
+
+/* Header styles */
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: #3C467B;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+}
+
+header h1 {
+  margin: 0;
+  color: white;
+}
+
+header a {
+  text-decoration: none;
+  color: white;
+}
+
+header nav ul {
+  display: flex;
+  list-style: none;
+  gap: 30px;
+  margin: 0;
+  padding: 0;
+}
+
+/* Footer styles */
+footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #3C467B;
+  padding: 15px 40px;
+  text-align: center;
+  border-top: 1px solid #dee2e6;
+}
+
+footer p {
+  margin: 0;
+  color: white;
 }
