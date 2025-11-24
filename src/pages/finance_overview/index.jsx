@@ -26,10 +26,10 @@ export default function FinanceOverview() {
       <MetricsSection metrics={metrics} />
       <div style={{ display: 'flex', gap: '2rem', marginTop: '2rem' }}>
         <div style={{ flex: 1 }}>
-          <WeeklyExpensesChart chartData={expensesChartData} />
+          <WeeklyIncomeChart chartData={incomeChartData} />
         </div>
         <div style={{ flex: 1 }}>
-          <WeeklyIncomeChart chartData={incomeChartData} />
+          <WeeklyExpensesChart chartData={expensesChartData} />
         </div>
       </div>
     </div>

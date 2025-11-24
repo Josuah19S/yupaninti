@@ -1,5 +1,5 @@
 import React from 'react';
-import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, ResponsiveContainer } from "recharts";
+import { BarChart, Bar, XAxis, YAxis, Tooltip, CartesianGrid, Legend, ResponsiveContainer } from "recharts";
 
 export default function WeeklyExpensesChart({ chartData }) {
   return (
@@ -13,7 +13,8 @@ export default function WeeklyExpensesChart({ chartData }) {
             <XAxis dataKey="name" />
             <YAxis />
             <Tooltip />
-            <Bar dataKey="total" fill="#636CCB" radius={[6, 6, 0, 0]} />
+            <Legend />
+            <Bar dataKey="total" fill="#636CCB" name="Gastos (S/)" radius={[6, 6, 0, 0]} />
           </BarChart>
         </ResponsiveContainer>
       </div>

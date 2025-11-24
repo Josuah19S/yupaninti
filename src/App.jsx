@@ -14,14 +14,16 @@ function App() {
       <div style={{ 
         display: 'flex', 
         flexDirection: 'column', 
-        minHeight: '100vh' 
+        minHeight: '100vh',
+        background: 'white'
       }}>
         <Header />
         <div style={{ 
           marginTop: '80px', 
           marginBottom: '60px',
           flex: 1,
-          width: '100%'
+          width: '100%',
+          background: 'white'
         }}>
           <Routes>
             <Route path="/" element={<Main />} />
