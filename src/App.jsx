@@ -21,8 +21,6 @@ function App() {
           marginTop: '80px', 
           marginBottom: '60px',
           flex: 1,
-          display: 'flex',
-          justifyContent: 'center',
           width: '100%'
         }}>
           <Routes>
