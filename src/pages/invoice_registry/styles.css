@@ -1,0 +1,105 @@
+/* --- CONTAINER --- */
+.invoice-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* centra horizontalmente */
+  justify-content: center; /* centra verticalmente */
+  min-height: 100vh; /* altura completa de la ventana */
+  padding: 40px;
+  background-color: #f0f0f0; /* opcional */
+}
+
+.page-title {
+  color: #3c467b;
+  font-size: 1.8rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* --- UPLOAD CARD --- */
+.upload-card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-top: 1.5rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  text-align: center;
+}
+
+.upload-btn {
+  background-color: #50589c;
+  color: white;
+  padding: 0.8rem 1.4rem;
+  border-radius: 10px;
+  cursor: pointer;
+  display: inline-block;
+  font-weight: 500;
+}
+
+.upload-btn input {
+  display: none;
+}
+
+.preview-img {
+  width: 100%;
+  max-width: 330px;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+/* --- OCR BUTTON --- */
+.ocr-btn {
+  background-color: #636ccb;
+  color: white;
+  width: 100%;
+  padding: 0.9rem;
+  border: none;
+  border-radius: 10px;
+  margin-top: 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+/* --- RESULT CARD --- */
+.result-card {
+  background: white;
+  padding: 1.2rem;
+  border-radius: 12px;
+  margin-top: 1.8rem;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+}
+
+.result-card h3 {
+  color: #50589c;
+  margin-bottom: 1rem;
+}
+
+/* --- FORM GRID --- */
+.form-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.form-grid div label {
+  color: #3c467b;
+  font-size: 0.9rem;
+}
+
+.form-grid div input {
+  width: 100%;
+  padding: 0.7rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+}
+
+.full-width {
+  grid-column: 1 / -1;
+}
+
+/* --- RESPONSIVE GRID --- */
+@media (min-width: 700px) {
+  .form-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
