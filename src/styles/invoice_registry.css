@@ -2,11 +2,12 @@
 .invoice-container {
   display: flex;
   flex-direction: column;
-  align-items: center; /* centra horizontalmente */
-  justify-content: center; /* centra verticalmente */
-  min-height: 100vh; /* altura completa de la ventana */
+  align-items: center;
+  justify-content: center;
+  min-height: calc(100vh - 140px);
   padding: 40px;
-  background-color: #f0f0f0; /* opcional */
+  max-width: 500px;
+  margin: 0 auto;
 }
 
 .page-title {
@@ -59,6 +60,8 @@
   font-size: 1rem;
   cursor: pointer;
   font-weight: 600;
+  text-align: center;
+  display: block;
 }
 
 /* --- RESULT CARD --- */

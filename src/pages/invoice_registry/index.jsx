@@ -1,6 +1,8 @@
 import { useState } from "react";
-import { mockInvoices } from "../../assets/mock_invoices";
-import "./styles.css";
+import { mockInvoices } from "@/data/mock_invoices";
+import "@/styles/invoice_registry.css";
+import UploadSection from "./components/UploadSection";
+import DetectedData from "./components/DetectedData";
 
 export default function InvoiceRegistry() {
   const [image, setImage] = useState(null);
@@ -22,58 +24,13 @@ export default function InvoiceRegistry() {
     <div className="invoice-container">
       <h2 className="page-title">Registro de Comprobantes</h2>
 
-      {/* UPLOAD CARD */}
-      <div className="upload-card">
-        <label className="upload-btn">
-          <span>Subir comprobante</span>
-          <input
-            type="file"
-            accept="image/*"
-            onChange={(e) =>
-              setImage(URL.createObjectURL(e.target.files[0]))
-            }
-          />
-        </label>
+      <UploadSection 
+        image={image} 
+        setImage={setImage} 
+        simulateOCR={simulateOCR} 
+      />
 
-        {image && <img src={image} alt="preview" className="preview-img" />}
-      </div>
-
-      {/* OCR BUTTON */}
-      <button className="ocr-btn" onClick={simulateOCR}>
-        Procesar comprobante
-      </button>
-
-      {/* OCR RESULT */}
-      <div className="result-card">
-        <h3>Datos detectados</h3>
-
-        <div className="form-grid">
-          <div>
-            <label>Proveedor</label>
-            <input value={formData.proveedor} readOnly />
-          </div>
-
-          <div>
-            <label>RUC</label>
-            <input value={formData.ruc} readOnly />
-          </div>
-
-          <div>
-            <label>Fecha</label>
-            <input value={formData.fecha} readOnly />
-          </div>
-
-          <div>
-            <label>Monto</label>
-            <input value={formData.monto} readOnly />
-          </div>
-
-          <div className="full-width">
-            <label>Producto</label>
-            <input value={formData.producto} readOnly />
-          </div>
-        </div>
-      </div>
+      <DetectedData formData={formData} />
     </div>
   );
 }
